@@ -11,18 +11,18 @@ import { sentry_url, logException } from './data/config';
 import Raven from 'raven-js';
 
 Raven.config(sentry_url, {
-    tags: {
-        git_commit: 'asddr3twi',
-        userLevel: 'editor',
-    }
+    //tags: {
+        //git_commit: 'asddr3twi',
+        //userLevel: 'editor',
+    //}
 }).install();
 
-logException(new Error('download failed!'), {
-    email: 'lsdf@gmail.com',
-});
+//logException(new Error('download failed!'), {
+    //email: 'lsdf@gmail.com',
+//});
 
-Raven.captureMessage('Something bad happened!');
-Raven.showReportDialog();
+//Raven.captureMessage('Something bad happened!');
+//Raven.showReportDialog();
 
 const router = (
     <Provider store={store}>
